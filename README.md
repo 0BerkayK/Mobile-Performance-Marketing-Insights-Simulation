@@ -3,66 +3,45 @@ A data analysis project that collects and analyzes data from advertising campaig
 
 
 
-Project Steps
+## 🎯 Purpose
+- Calculate performance marketing KPIs (CPI, CTR, ROAS, LTV)
+- Report campaigns on a daily/weekly/monthly basis
+- Identify optimization opportunities through anomaly detection
+- Provide data-driven recommendations to marketing and UA teams
 
-1️⃣ Data Collection & Cleaning
-Purpose: Combining campaign data from multiple sources into a single dataset.
+---
 
-Scope:
+## 📌 Project Steps
 
-campaign_data.csv (KPIs: impressions, clicks, installs, spend, revenue, country, app_name, date)
+### 1️⃣ Data Collection & Cleaning
+- Combine campaign data from different sources
+- Extract data with SQL (BigQuery/Snowflake scenario)
+- Clean data with Python (`pandas`): missing value, outlier check
+- **Output:** `data/campaign_data.csv`
 
-Data extraction with SQL query (BigQuery/Snowflake scenario).
+### 2️⃣ Performance Marketing KPI Calculations
+- Calculate metrics such as CPI, CTR, ROAS, LTV
+- Breakdown by country, platform (iOS/Android), and application
+- Automatic export to Excel report format
+- **Technology:** Python (pandas, openpyxl)
 
-Purpose: Cleaning with Python pandas: missing data, outlier checking.
+### 3️⃣ Dashboard & Automatic Reporting
+- Campaign Performance Dashboard with Power BI / Tableau**
+- Automatic PDF report with Python (charts: matplotlib, seaborn)
+- **Outputs:**
+- `dashboards/performance_dashboard.pbix`
+- `reports/daily_anomaly_report.pdf`
 
-Qualification Requirement: SQL + Python + data preparation skills.
+### 4️⃣ Detailed Campaign Monitoring & Anomaly Detection
+- Daily trend tracking
+- Detection of abnormal performance changes
+- Trend analysis with Python (`scipy`, `statsmodels`)
+- **Output:** `reports/daily_anomaly_report.pdf`
 
-2️⃣ Performance Marketing KPI Calculations
-Purpose: Measuring campaign health using the KPIs highlighted in the ad (CPI, CTR, ROAS, LTV).
-
-Scope:
-
-Calculating KPI formulas with Python.
-
-Breakdown by country, platform (iOS/Android), and application.
-
-Automatic export to Excel.
-
-Qualification Requirement: Analytical skills, advanced level of Excel.
-
-3️⃣ Dashboard & Automated Reporting
-Purpose: Quickly deliver daily/weekly/monthly reports.
-
-Scope:
-
-Campaign Performance Dashboard with Power BI or Tableau (20 apps, 25 countries).
-
-Automatic PDF report with Python (matplotlib + seaborn charts).
-
-Quality: Dashboard creation, reporting, and visualization.
-
-4️⃣ Detailed Campaign Monitoring & Anomaly Detection
-Purpose: Continuously monitor active campaigns and detect abnormal fluctuations.
-
-Scope:
-
-Trend change detection with Python scipy or statsmodels.
-
-Alert the marketing team with the "Daily Anomaly Report."
-
-Quality: In-depth data analysis and detailed tracking.
-
-5️⃣ Insights and Optimization Recommendations
-Purpose: Generate actionable recommendations to guide the marketing and UA teams.
-
-Scope:
-
-KPI comparisons (e.g., countries with low Android CPI but high ROAS → budget increase recommendation).
-
-Strategic recommendations via text file (insights.md).
-
-Quality compensation: Data-driven decision support, campaign optimization.
+### 5️⃣ Insights and Optimization Recommendations
+- Strategic recommendations with KPI comparisons
+- Budget allocation and country/app-based optimization recommendations
+- **Output:** `reports/insights.md`
 
 ## 🧩 Project Structure
 
