@@ -4,6 +4,7 @@ A data analysis project that collects and analyzes data from advertising campaig
 
 
 Project Steps
+
 1️⃣ Data Collection & Cleaning
 Purpose: Combining campaign data from multiple sources into a single dataset.
 
@@ -62,3 +63,33 @@ KPI comparisons (e.g., countries with low Android CPI but high ROAS → budget i
 Strategic recommendations via text file (insights.md).
 
 Quality compensation: Data-driven decision support, campaign optimization.
+
+
+mobile_perf_insights/
+│
+├── data/
+│   ├── campaign_data.csv
+│   ├── app_metadata.csv
+│
+├── notebooks/
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_kpi_analysis.ipynb
+│   ├── 03_dashboard_export.ipynb
+│
+├── dashboards/
+│   ├── performance_dashboard.pbix
+│
+├── reports/
+│   ├── daily_anomaly_report.pdf
+│   ├── insights.md
+│
+├── scripts/
+│   ├── sql/
+│   │   ├── fetch_campaign_data.sql
+│   ├── python/
+│   │   ├── generate_kpi_report.py
+│   │   ├── anomaly_detection.py
+│
+└── README.md
+
+
