@@ -64,7 +64,9 @@ Strategic recommendations via text file (insights.md).
 
 Quality compensation: Data-driven decision support, campaign optimization.
 
+## 🧩 Project Structure
 
+```bash
 mobile_perf_insights/
 │
 ├── data/
@@ -92,4 +94,4 @@ mobile_perf_insights/
 │
 └── README.md
 
-
+```
