@@ -43,6 +43,11 @@ A data analysis project that collects and analyzes data from advertising campaig
 - Budget allocation and country/app-based optimization recommendations
 - **Output:** `reports/insights.md`
 
+## Dashboard
+
+You can view the Dashboard online : [Power BI Service](https://app.powerbi.com/links/JDdqL9xz7o?ctid=f5eff703-9ba1-4447-bf54-92512c4d1a8c&pbi_source=linkShare)
+
+
 ## 🧩 Project Structure
 
 ```bash
