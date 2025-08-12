@@ -50,7 +50,7 @@ mobile_perf_insights/
 │
 ├── data/
 │   ├── campaign_data.csv
-│   ├── app_metadata.csv
+│   
 │
 ├── notebooks/
 │   ├── 01_data_cleaning.ipynb
@@ -59,14 +59,16 @@ mobile_perf_insights/
 │
 ├── dashboards/
 │   ├── performance_dashboard.pbix
+│   ├── performance_dashboard_data.csv
 │
 ├── reports/
 │   ├── daily_anomaly_report.pdf
 │   ├── insights.md
+│   ├── daily_anomaly_report.csv
+│   ├── kpi_report.xlsx
+│   ├── roas_chart.png
 │
 ├── scripts/
-│   ├── sql/
-│   │   ├── fetch_campaign_data.sql
 │   ├── python/
 │   │   ├── generate_kpi_report.py
 │   │   ├── anomaly_detection.py
