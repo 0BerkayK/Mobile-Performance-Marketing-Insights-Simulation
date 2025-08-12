@@ -2,17 +2,17 @@ import os
 import pandas as pd
 from datetime import datetime
 
-# Veri yolu ayarı
+
 base_dir = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(base_dir, "..", "..", "data", "campaign_data.csv")
 
-# Veriyi oku
+
 df = pd.read_csv(data_path)
 
-# Tarihi datetime formatına çevir
+
 df["date"] = pd.to_datetime(df["date"])
 
-# KPI sütunları yoksa hesapla
+
 if 'CTR' not in df.columns:
     df['CTR'] = df['clicks'] / df['impressions']
 if 'CPI' not in df.columns:
@@ -20,20 +20,20 @@ if 'CPI' not in df.columns:
 if 'ROAS' not in df.columns:
     df['ROAS'] = df['revenue'] / df['spend']
 
-# Kontrol edilecek KPI’lar
+
 kpi_list = ["ROAS", "CPI", "CTR"]
 
-# Yüzde değişim bazlı anomali tespiti
+
 def detect_anomalies_pct_change(series, pct_threshold=0.1):
     pct_change = series.pct_change().abs()
     return pct_change > pct_threshold
 
-# Mutlak değişim bazlı anomali tespiti
+
 def detect_anomalies_abs_change(series, abs_threshold):
     abs_change = series.diff().abs()
     return abs_change > abs_threshold
 
-# Mutlak değişim eşikleri (KPI bazlı)
+
 abs_thresholds_map = {
     "ROAS": 0.5,   # Örnek eşik, istersen ayarla
     "CPI": 0.5,
@@ -42,8 +42,7 @@ abs_thresholds_map = {
 
 anomaly_records = []
 
-# KPI’ların istatistiksel özetini görmek istersen yorum satırını kaldırabilirsin
-# print(df[['ROAS', 'CPI', 'CTR']].describe())
+
 
 for (app, country, platform), group in df.groupby(["app_name", "country", "platform"]):
     group_sorted = group.sort_values("date")
@@ -71,3 +70,4 @@ output_path = os.path.join(base_dir, "..", "..", "reports", "daily_anomaly_repor
 anomalies_df.to_csv(output_path, index=False)
 
 print(f"Anomaly detection completed. {len(anomalies_df)} anomalies saved to {output_path}")
+
